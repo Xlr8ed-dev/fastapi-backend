@@ -70,9 +70,9 @@ migrations/versions/
 dmypy.json
 
 # Docker related files
-.dockerignore
-Dockerfile
-docker-compose.yml
+# .dockerignore
+# Dockerfile
+# docker-compose.yml
 
 # Pytest
 .cache/

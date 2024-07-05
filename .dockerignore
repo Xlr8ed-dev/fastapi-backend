@@ -1,0 +1,45 @@
+# Ignore Python cache files
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore virtual environments
+venv/
+env/
+
+# Ignore development and environment files
+.env
+*.env
+
+# Ignore test files and directories
+tests/
+*.test
+*.spec
+
+# Ignore logs
+logs/
+*.log
+
+# Ignore local configuration files
+*.local
+
+# Ignore IDE and editor files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Ignore Docker-related files
+Dockerfile
+docker-compose.yml
+
+# Ignore node_modules if using Node.js for frontend
+node_modules/
+
+# Ignore build directories
+build/
+dist/
+
+# Ignore temporary files
+*.swp
+*.tmp
