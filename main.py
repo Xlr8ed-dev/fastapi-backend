@@ -1,7 +1,9 @@
-from typing import Union
-from fastapi import FastAPI
-from pydantic import BaseModel
+import traceback
 from enum import Enum
+from typing import Union
+from pydantic import BaseModel
+from fastapi import FastAPI, Query
+from typing_extensions import Annotated
 
 app = FastAPI()
 
@@ -68,13 +70,6 @@ async def update_item(item_id: int, item: Item, q: str | None = None):
     if q:
         result.update({"q": q})
     return result
-import os, traceback
-from pydantic import BaseModel
-from typing_extensions import Annotated
-from typing import Union, List, Optional
-from fastapi import FastAPI, Response, status, Query
-
-app = FastAPI()
 
 
 class Item(BaseModel):
@@ -122,14 +117,6 @@ async def get_item(item_id: int, user_id: int):
 @app.post("/items/")
 async def create_item(item: Item):
     return item
-
-
-from typing import Union
-
-from fastapi import FastAPI, Query
-from typing_extensions import Annotated
-
-app = FastAPI()
 
 
 @app.get("/items/")
